@@ -65,7 +65,7 @@ $('.nav-link').on('click', function () {
                         </p>
                         <hr>
                         <p>
-                            <i>do</i> Qur'an is a part of <a href="https://github.com/anugrahra"><i>anugrah's Project</i></a>. The learning project of <a href="https://anugrah.club">Anugrah</a>, a plumber who learns coding.
+                            <i>do</i> Qur'an is a part of <a href="https://github.com/anugrahra"><i>anugrah Project</i></a>. The learning project of <a href="https://anugrah.club">Anugrah</a>, a plumber who learns coding.
                         </p>
                     </div>
                 </div>
