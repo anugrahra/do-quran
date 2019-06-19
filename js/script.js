@@ -32,6 +32,10 @@ $('.nav-link').on('click', function () {
     //this adalah nav-link yang lagi di-click
     $(this).addClass('active')
 
+    if ($(window).width() < 1000) {
+        $('.navbar-toggler').click()
+    }
+
     let kategori = $(this).html()
     let tipe = $(this).data('tipe')
     $('h3').html(kategori + '&nbsp;&#65021;')
