@@ -1,12 +1,15 @@
+let theAPI = 'https://al-quran-8d642.firebaseio.com/data.json?print=pretty'
+
 //tampilkan semua surat
 function tampilkanSemuaSurat () {
-    $.getJSON('https://al-quran-8d642.firebaseio.com/data.json?print=pretty', function (data) {
+    let lampu = document.getElementById("body").className;
+    $.getJSON(theAPI, function (data) {
         let surat = data
         $('#surat-list').empty()
         //i adalah index, data adalah isinya
         $.each(surat, function(i, data) {
             $('#surat-list').append(`
-                <div class="card">
+                <div class="card ` + lampu + `">
                     <div class="card-body">
                         <h5 class="card-title">` + data.nama + `&nbsp;(` + data.asma + `)</h5>
                         <h6 class = "card-subtitle mb-2 text-muted"> ` + data.arti + ` </h6>
@@ -73,14 +76,16 @@ $('.nav-link').on('click', function () {
         return
     }
 
-    $.getJSON('https://al-quran-8d642.firebaseio.com/data.json?print=pretty', function(data) {
+    let lampu = document.getElementById("body").className;
+
+    $.getJSON(theAPI, function (data) {
         let surat = data
         let content = ''
 
         $.each(surat, function (i, data) {
             if (data.type == tipe) {
                 content += `
-                <div class="card">
+                <div class="card ` + lampu + `">
                     <div class="card-body">
                         <h5 class="card-title">` + data.nama + `&nbsp;(` + data.asma + `)</h5>
                         <h6 class = "card-subtitle mb-2 text-muted"> ` + data.arti + ` </h6>
@@ -104,7 +109,7 @@ $('.nav-link').on('click', function () {
 $('#surat-list').on('click', '.see-detail', function () {
     let nomorSurat = $(this).data('nomor')
     
-    $.getJSON('https://al-quran-8d642.firebaseio.com/data.json?print=pretty', function (data) {
+    $.getJSON(theAPI, function (data) {
         let surat = data
         let detilSurat = ''
         let title = ''
@@ -152,7 +157,7 @@ $('#surat-list').on('click', '.see-detail', function () {
 //search surat
 function searchSurat() {
     let keyword = $('#search-input').val()
-    $.getJSON('https://al-quran-8d642.firebaseio.com/data.json?print=pretty', function (surat) {
+    $.getJSON(theAPI, function (surat) {
         
         $.each(surat, function (i, data) {
             if (surat.nama == keyword) {
@@ -186,3 +191,14 @@ $('#search-input').on('keyup', function (e) {
         searchSurat()
     }
 })
+
+//dark and light mode
+function toggleDarkLight() {
+    $("body").toggleClass("dark light")
+    $('.card').toggleClass("dark light")
+    $('.navbar').toggleClass("navbar-dark navbar-light")
+    $('.navbar').toggleClass("bg-dark bg-light")
+    $('footer').toggleClass("bg-dark bg-light")
+    $('footer').toggleClass("text-dark text-light")
+}
+//end of dark and light mode
