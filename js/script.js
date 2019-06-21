@@ -30,8 +30,8 @@ function tampilkanSemuaSurat () {
 tampilkanSemuaSurat()
 
 //nav-link makiyyah-madaniyah
-$('.nav-link').on('click', function () {
-    $('.nav-link').removeClass('active')
+$('.page').on('click', function () {
+    $('.page').removeClass('active')
     //this adalah nav-link yang lagi di-click
     $(this).addClass('active')
 

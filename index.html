@@ -25,10 +25,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Daftar Surat</a>
-                    <a class="nav-item nav-link" data-tipe="mekah" href="#">Makkiyah</a>
-                    <a class="nav-item nav-link" data-tipe="madinah" href="#">Madaniyah</a>
-                    <a class="nav-item nav-link" href="#">About</a>
+                    <a class="nav-item nav-link page active" href="#">Daftar Surat</a>
+                    <a class="nav-item nav-link page" data-tipe="mekah" href="#">Makkiyah</a>
+                    <a class="nav-item nav-link page" data-tipe="madinah" href="#">Madaniyah</a>
+                    <a class="nav-item nav-link page" href="#">About</a>
+                    <a href="#" id="dark-mode" class="nav-item nav-link" style="text-decoration: none" onclick="toggleDarkLight()">
+                        <span id="simbol" class="">🌙Dark</span>
+                    </a>
                 </div>
                 <form class="form-inline ml-auto">
                     <input class="form-control mr-sm-2" type="text" placeholder="Nama surat..." id="search-input">
@@ -42,11 +45,6 @@
         <div class="row mt-2">
             <div class="col">
                 <h3>Daftar Surat &#65021;</h3>
-            </div>
-            <div class="col text-right">
-                <a href="#" id="dark-mode" class="" style="text-decoration: none" onclick="toggleDarkLight()">
-                    <span id="simbol" class="">🌙</span>
-                </a>
             </div>
         </div>
 

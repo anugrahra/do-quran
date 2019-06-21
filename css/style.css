@@ -9,7 +9,7 @@
 }
 
 .dark-mode::after {
-    content: "☀️";
+    content: "☀️Light";
 }
 
 .simbol {
