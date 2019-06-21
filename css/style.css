@@ -7,3 +7,11 @@
     background-color: white;
     color: black;
 }
+
+.dark-mode::after {
+    content: "☀️";
+}
+
+.simbol {
+    display: none;
+}

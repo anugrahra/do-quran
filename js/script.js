@@ -200,5 +200,7 @@ function toggleDarkLight() {
     $('.navbar').toggleClass("bg-dark bg-light")
     $('footer').toggleClass("bg-dark bg-light")
     $('footer').toggleClass("text-dark text-light")
+    $('#dark-mode').toggleClass("dark-mode")
+    $('#simbol').toggleClass("simbol")
 }
 //end of dark and light mode
