@@ -108,7 +108,8 @@ $('.page').on('click', function () {
 //lihat detail surat
 $('#surat-list').on('click', '.see-detail', function () {
     let nomorSurat = $(this).data('nomor')
-    
+    let lampu = document.getElementById("body").className;
+
     $.getJSON(theAPI, function (data) {
         let surat = data
         let detilSurat = ''
@@ -129,13 +130,25 @@ $('#surat-list').on('click', '.see-detail', function () {
                     <div class="row">
                         <div class="col">
                             <ul class="list-group">
-                                <li class="list-group-item"><b>Arti:&nbsp;</b>` + data.arti + `</li>
-                                <li class="list-group-item"><b>Keterangan:</b><br>` + data.keterangan + `</li>
-                                <li class="list-group-item"><b>Tempat Turun:&nbsp;</b>` + tempat + `</li>
-                                <li class="list-group-item"><b>Urutan Pewahyuan:&nbsp;</b>` + data.urut + `</li>
-                                <li class="list-group-item"><b>Jumlah Ayat:&nbsp;</b>` + data.ayat + `</li>
-                                <li class="list-group-item"><b>Jumlah Ruku&apos;:&nbsp;</b>` + data.rukuk + `</li>
-                                <li class="list-group-item"><b>Dengar Surat:<br></br>
+                                <li class="list-group-item ` + lampu + `">
+                                    <b>Arti:&nbsp;</b>` + data.arti + `
+                                </li>
+                                <li class = "list-group-item ` + lampu + `">
+                                    <b>Keterangan:</b><br>` + data.keterangan + `
+                                </li>
+                                <li class="list-group-item ` + lampu + `">
+                                    <b>Tempat Turun:&nbsp;</b>` + tempat + `
+                                </li>
+                                <li class="list-group-item ` + lampu + `">
+                                    <b>Urutan Pewahyuan:&nbsp;</b>` + data.urut + `
+                                </li>
+                                <li class="list-group-item ` + lampu + `">
+                                    <b>Jumlah Ayat:&nbsp;</b>` + data.ayat + `
+                                </li>
+                                <li class="list-group-item ` + lampu + `">
+                                    <b>Jumlah Ruku&apos;:&nbsp;</b>` + data.rukuk + `
+                                </li>
+                                <li class="list-group-item ` + lampu + `"><b>Dengar Surat:<br></br>
                                     <audio controls>
                                         <source src="` + data.audio + `" type="audio/mpeg">
                                         Your browser does not support the audio element.
